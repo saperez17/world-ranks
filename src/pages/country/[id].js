@@ -112,7 +112,7 @@ export const getStaticPaths = async ()=>{
 
 //getServerSidePops is used to fetch data from the server whenever we get into the country 
 //page
-export const getServerSideProps = async ({params})=>{
+export const getStaticProps = async ({params})=>{
     const country = await getCountry(params.id)
     return{
         props:{
